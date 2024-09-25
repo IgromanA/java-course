@@ -5,9 +5,9 @@ class Task3{
         System.out.println("Введите сторонe додекаэдра: "); //Вводим длину стороны
         Scanner sc = new Scanner(System.in); 
         
-        int lenght = sc.nextInt(); // Считываем введенное значение
+        int a = sc.nextInt(); // Считываем введенное значение
 
-        Double Ans = ((15 + 7 * Math.sqrt(5)) / 4 * Math.pow(lenght, 3)); // Вычисляем объем
+        Double Ans = ((15 + 7 * Math.sqrt(5)) / 4 * Math.pow(a, 3)); // Вычисляем объем
         System.out.println("Объем додекаэдра: " + Ans);
     }
 }
