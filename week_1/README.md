@@ -13,7 +13,7 @@
 
 Для решения данной задачи понадобились:
 
-- Поля класса `Integer` - `MAX_VALUE` и `MIN_VALUE`
+- Поля классов `Byte`, `Short`, `Int`, `Long`, `Float` и `Double` - `MAX_VALUE` и `MIN_VALUE`
 - Метод `System.out.println` для вывода результата
 
 ---
