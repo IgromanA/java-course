@@ -23,7 +23,7 @@
 hs_err_pid*
 replay_pid*
 
-week_*/task*/target/
-week_*/task*/.settings/
-week_*/task*/.classpath
-week_*/task*/.project
+target
+.settings
+.classpath
+.project
