@@ -11,7 +11,7 @@ public class BankAccount {
 
     public void deposite(double amount) {
         if (amount < 0) {
-            return;
+            return; // Пустой return необходим для моментального завершения метода
         }
         balance += amount;
         System.out.printf("На баланс начислено %.2f\n", amount);
@@ -19,7 +19,7 @@ public class BankAccount {
     
     public void withdraw(double amount) {
        if (amount < 0) {
-           return;
+           return; // Пустой return для моментального завершения метода
        } 
        if (amount <= balance) {
            balance -= amount;
