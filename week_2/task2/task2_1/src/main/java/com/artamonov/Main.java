@@ -1,7 +1,7 @@
 package com.artamonov;
 
-import java.time.LocalDateTime;
-import java.time.Month;
+import java.time.LocalDateTime; // Класс используется для введения даты и времени для дня рождения
+import java.time.Month; // Класс Month используется для указания месяца
 
 public class Main {
     public static void main(String[] args) {
