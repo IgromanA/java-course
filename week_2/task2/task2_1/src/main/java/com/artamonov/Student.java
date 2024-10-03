@@ -1,9 +1,9 @@
 package com.artamonov;
 
-import java.time.LocalDateTime;
-import java.time.Period;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime; // Пакет time добавляет класс, который хранит дату и время
+import java.time.Period; // Класс представляет кол-во времени в годах, месяцах и днях
+import java.time.LocalDate; // Класс, который хранит только дату
+import java.time.format.DateTimeFormatter; // Класс используется для форматирования дат
 
 public class Student {
     private String name;
@@ -20,10 +20,12 @@ public class Student {
         this.averageScore = averageScore;
     }
 
+    // Используя метод between можно найти разницу между двумя датами, а метод getYears выразить эту разницу в годах
     public int getAge() {
         return Period.between(birthDate.toLocalDate(), LocalDate.now()).getYears();
     }
     
+    // Метод возвращает значения true и false в зависимости от среднего балла
     public boolean isExcellentStudent() {
         return averageScore >= 4.8;
     }
@@ -73,4 +75,6 @@ public class Student {
         return String.format("Студент %s:\n - ID: %d\n - Дата рождения: %s\n - Возраст: %d\n - Группа: %s\n - Средний балл: %.1f\n - Примерный студент: %s",
                 name, studentId, DateTimeFormatter.ofPattern("dd-MM-yy").format(birthDate), getAge(), group, averageScore, isExcellentStudent() ? "Да" : "Нет");
     }
+    // Используя класс DateTimeFormatter и его метод ofPattern мы преобразуем дату рождения (birthDate) в удобный нам вид
+    // Для метода isExcellentStudent используется тернарный оператор, чтобы преобразовать boolean значение в String 
 }
