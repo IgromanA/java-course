@@ -3,19 +3,19 @@ package com.artamonov;
 public class Console {
     private String name;
     private String color;
-    private int releasedata;
+    private int releaseYear;
 
     public Console() {
         this.color = "grey";
         this.name = "Chinese copy";
     }
 
-    public Console(String name, String color, int releasedata) {
+    public Console(String name, String color, int releaseYear) {
         this.name = name;
         this.color = color;
 
-        if (releasedata >= 0)
-            this.releasedata = releasedata;
+        if (releaseYear >= 0)
+            this.releaseYear = releaseYear;
     }
     
     public String getName() {
@@ -34,16 +34,16 @@ public class Console {
         this.color = color;
     }
 
-    public int getReleaseData() {
-        return releasedata;
+    public int getReleaseYear() {
+        return releaseYear;
     }
 
-    public void setReleaseData(int releasedata) {
-        if (releasedata >= 0)
-            this.releasedata = releasedata;
+    public void setReleaseYear(int releaseYear) {
+        if (releaseYear >= 0)
+            this.releaseYear = releaseYear;
     }
     
     public String toString() {
-        return String.format("%s console in %s color was released in %d", name, color, releasedata);
+        return String.format("%s console in %s color was released in %d", name, color, releaseYear);
     }
 }
