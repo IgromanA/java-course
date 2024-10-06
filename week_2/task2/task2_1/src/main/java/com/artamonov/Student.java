@@ -5,6 +5,9 @@ import java.time.Period; // Класс представляет кол-во вр
 import java.time.LocalDate; // Класс, который хранит только дату
 import java.time.format.DateTimeFormatter; // Класс используется для форматирования дат
 
+/*Используя класс DateTimeFormatter и его метод ofPattern мы преобразуем дату рождения (birthDate) в удобный нам вид
+Для метода isExcellentStudent используется тернарный оператор, чтобы преобразовать boolean значение в String */
+
 public class Student {
     private String name;
     private LocalDateTime birthDate;
@@ -73,8 +76,6 @@ public class Student {
     @Override
     public String toString() {
         return String.format("Студент %s:\n - ID: %d\n - Дата рождения: %s\n - Возраст: %d\n - Группа: %s\n - Средний балл: %.1f\n - Примерный студент: %s",
-                name, studentId, DateTimeFormatter.ofPattern("dd-MM-yy").format(birthDate), getAge(), group, averageScore, isExcellentStudent() ? "Да" : "Нет");
+                getName(), getStudentID(), DateTimeFormatter.ofPattern("dd-MM-yy").format(birthDate), getAge(), getGroup(), getAverageScore(), isExcellentStudent() ? "Да" : "Нет");
     }
-    // Используя класс DateTimeFormatter и его метод ofPattern мы преобразуем дату рождения (birthDate) в удобный нам вид
-    // Для метода isExcellentStudent используется тернарный оператор, чтобы преобразовать boolean значение в String 
 }
