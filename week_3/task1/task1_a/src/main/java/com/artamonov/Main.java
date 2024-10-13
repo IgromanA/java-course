@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Введите ваш возраст: ");
 
         Age yourAge = new Age(sc.nextInt());
-        yourAge.getAge();
+        System.out.println(yourAge);;
 
         sc.close();
     }
