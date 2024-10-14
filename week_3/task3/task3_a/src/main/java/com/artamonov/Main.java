@@ -19,10 +19,8 @@ public class Main {
         sc.close();
 
         Counter maxCounter = new Counter(numbers);
-        double max = maxCounter.findMax();
-        int count = maxCounter.countMax(max);
+        int count = (int) maxCounter.maxCounter();
 
-        System.out.println("Максимальное число: " + max);
         System.out.println("Количество чисел, равных максимальному: " + count);
     }
 }
