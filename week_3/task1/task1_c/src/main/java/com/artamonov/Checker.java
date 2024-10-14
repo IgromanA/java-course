@@ -1,11 +1,7 @@
 package com.artamonov;
 
 public class Checker {
-    public String weekday;
-    public String temperature; 
-    public String precipitation; 
-    public String wind; 
-    public String wetness;
+    public String weekday, temperature, precipitation, wind, wetness;
 
     public void setChecker(String weekday, String temperature, String precipitation, String wind, String wetness) {
         this.weekday = weekday;
