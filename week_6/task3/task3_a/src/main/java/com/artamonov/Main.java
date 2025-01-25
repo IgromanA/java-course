@@ -17,7 +17,7 @@ public class Main {
         sc.close();
 
         int[] uniqueArray = Unduplicator.removeDuplicates(inputArray);
-        System.out.print("Массив без дубликатов: \n");
+        System.out.print("Array without duplicates: \n");
         for (int num : uniqueArray) {
             System.out.print(num + " ");
         }
