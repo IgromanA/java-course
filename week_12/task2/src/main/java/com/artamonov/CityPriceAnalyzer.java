@@ -4,15 +4,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class HousePriceRecord {
+public class CityPriceAnalyzer {
 
-    public static Map<Integer, Map<String, Integer>> getYearlyMaxPrices(List<DataLoader> records) {
+    public static Map<Integer, Map<String, Integer>> getYearlyMaxPrices(List<CityPriceInfo> records) {
         return records.stream()
                 .collect(Collectors.groupingBy(
-                        DataLoader::getYear,
+                        CityPriceInfo::getYear,
                         Collectors.toMap(
-                                DataLoader::getCity,
-                                DataLoader::getPrice,
+                                CityPriceInfo::getCity,
+                                CityPriceInfo::getPrice,
                                 Math::max // Берем максимальную цену
                         )
                 ));

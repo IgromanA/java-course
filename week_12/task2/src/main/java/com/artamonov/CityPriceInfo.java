@@ -1,11 +1,11 @@
 package com.artamonov;
 
-public class DataLoader {
+public class CityPriceInfo {
     private final int year;
     private final String city;
     private final int price;
 
-    public DataLoader(int year, String city, int price) {
+    public CityPriceInfo(int year, String city, int price) {
         this.year = year;
         this.city = city;
         this.price = price;
